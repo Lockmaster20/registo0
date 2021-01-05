@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="shortcut icon" href="static/favicon.png">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+<body>
+
+<div class="navbar">
+    <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a href="login"><i class="fa fa-fw fa-lock"></i> Iniciar Sessão</a>
+    <a href="registo"><i class="fa fa-fw fa-user"></i> Registo</a>
+    <a href="newpasse"><i class="fa fa-fw fa-recycle"></i> Alterar Passe</a>
+    <a href="apagar"><i class="fa fa-fw fa-recycle"></i> Eliminar Conta</a>
+</div>
+
+{% block body %}
+{% endblock %}
+
+<h3>&copy; 2021 Diogo Fernandes</h3>
+
+</body>
+</html>
