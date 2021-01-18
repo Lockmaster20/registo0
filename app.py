@@ -63,7 +63,7 @@ def route():
     erro = None
     if request.method == 'POST':
         v1 = request.form['nome']
-        v2 = request.form['desc']
+        v2 = request.form['descri']
         v3 = request.form['price']
         if existe(v1):
             erro = 'O Instrumento já existe.'
