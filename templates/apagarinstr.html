@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h2>Apagar Instrumento</h2>
+<fieldset>
+    <legend>Introduza os dados</legend>
+    <form method="post">
+         <h4>Nome do Instrumento</h4>
+        <input type='text' name='nome' required>
+        <p><br></p>
+        <input type='submit' value="Eliminar">
+    </form>
+</fieldset>
+{% if erro %}<h1>{{ erro }}</h1>{% endif %}
+{% endblock %}

@@ -70,7 +70,7 @@ def route():
         else:
             gravar(v1, v2, v3)
             erro = 'Instrumento adicionado com sucesso.'
-    return render_template('registo.html', erro=erro)
+    return render_template('addinstr.html', erro=erro)
 
 
 @app.route('/')
@@ -103,7 +103,7 @@ def apagar():
         else:
             apaga(v1)
             erro = 'Instrumento Eliminado com Sucesso.'
-    return render_template('apagar.html', erro=erro)
+    return render_template('apagarinstr.html', erro=erro)
 
 
 @app.route('/newpasse', methods=['GET', 'POST'])
@@ -118,7 +118,7 @@ def newpasse():
         else:
             alterar(v1, v2)
             erro = 'Preço alterado com sucesso.'
-    return render_template('newpasse.html', erro=erro)
+    return render_template('altpreco.html', erro=erro)
 
 
 if __name__ == '__main__':
