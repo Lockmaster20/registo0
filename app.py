@@ -57,6 +57,17 @@ def apaga(v1):
     ficheiro.commit()
     ficheiro.close()
 
+def lista():
+    try:
+        ficheiro = herokudb()
+        db = ficheiro.cursor()
+        db.execute("SELECT * FROM instr;")
+        valor = db.fetchall()
+        ficheiro.close()
+    except:
+        valor = None
+    return valor
+
 
 @app.route('/registo', methods=['GET', 'POST'])
 def route():
@@ -120,6 +131,10 @@ def newpasse():
             erro = 'Preço alterado com sucesso.'
     return render_template('altpreco.html', erro=erro)
 
+@app.route('/search')
+def search():
+    usr = lista()
+    return render_template('tableinst.html', usr=usr)
 
 if __name__ == '__main__':
     app.run(debug=True)

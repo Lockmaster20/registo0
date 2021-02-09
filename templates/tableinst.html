@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<p><br></p>
+<h2>Search</h2>
+
+<br><br>
+
+<center>
+<table border="1">
+    <tr>
+        {% for li in range(0, 5) %}
+        {% for co in range(0, 3) %}
+        <td>
+            {{ usr[li][co] }}
+        </td>
+        {% endfor %}
+    </tr>
+    <tr>
+        {% endfor %}
+    </tr>
+</table>
+</center>
+
+<p><br></p>
+{% endblock %}
