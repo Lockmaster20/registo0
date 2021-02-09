@@ -61,7 +61,7 @@ def lista():
     try:
         ficheiro = herokudb()
         db = ficheiro.cursor()
-        db.execute("SELECT * FROM instr;")
+        db.execute("SELECT * FROM instr ORDER BY Nome DESC")
         valor = db.fetchall()
         ficheiro.close()
     except:
@@ -133,8 +133,8 @@ def newpasse():
 
 @app.route('/search')
 def search():
-    usr = lista()
-    return render_template('tableinst.html', usr=usr)
+    dados = lista()
+    return render_template('tableinst.html', tabela=dados, max=len(dados))
 
 if __name__ == '__main__':
     app.run(debug=True)
